@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>新能源汽车零部件采购岗位作品集 | 柳毅</title>
+  <style>
+    :root {
+      --ink: #17211f;
+      --muted: #60706b;
+      --line: #d9e1de;
+      --paper: #f7f9f7;
+      --panel: #ffffff;
+      --green: #1d7a63;
+      --green-dark: #0f4c3f;
+      --teal: #1b6f83;
+      --blue: #285f9f;
+      --amber: #b56b1f;
+      --red: #9f3a35;
+      --shadow: 0 18px 50px rgba(21, 38, 34, 0.09);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(247, 249, 247, 0.92), rgba(247, 249, 247, 1)),
+        repeating-linear-gradient(90deg, rgba(29, 122, 99, 0.045) 0, rgba(29, 122, 99, 0.045) 1px, transparent 1px, transparent 42px);
+      line-height: 1.7;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 240px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    aside {
+      position: sticky;
+      top: 0;
+      align-self: start;
+      height: 100vh;
+      padding: 28px 22px;
+      background: #10251f;
+      color: #f4fbf8;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .brand {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: #e7f3ee;
+      color: var(--green-dark);
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .brand p {
+      margin: 0;
+      color: #a9c0b9;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    nav {
+      display: grid;
+      gap: 6px;
+    }
+
+    nav a {
+      display: block;
+      padding: 9px 10px;
+      border-radius: 6px;
+      color: #d6e5df;
+      font-size: 13px;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .side-note {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.13);
+      color: #a9c0b9;
+      font-size: 12px;
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: grid;
+      align-items: center;
+      padding: 62px min(7vw, 86px) 40px;
+      overflow: hidden;
+      background:
+        linear-gradient(100deg, rgba(16, 37, 31, 0.92), rgba(16, 37, 31, 0.62)),
+        url("data:image/svg+xml,%3Csvg width='1400' height='820' viewBox='0 0 1400 820' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1400' height='820' fill='%23dfe8e4'/%3E%3Cg opacity='0.9'%3E%3Cpath d='M40 675 C180 585 285 618 405 525 C520 436 630 450 760 350 C890 250 1030 260 1350 110' fill='none' stroke='%231d7a63' stroke-width='10' stroke-linecap='round'/%3E%3Cpath d='M80 705 C225 625 340 650 480 565 C620 480 700 500 850 390 C1015 270 1110 302 1370 190' fill='none' stroke='%23285f9f' stroke-width='5' stroke-linecap='round' opacity='0.7'/%3E%3Cg fill='%23ffffff' stroke='%2317251f' stroke-width='3'%3E%3Crect x='170' y='558' width='160' height='70' rx='10'/%3E%3Crect x='430' y='486' width='178' height='74' rx='10'/%3E%3Crect x='710' y='342' width='170' height='72' rx='10'/%3E%3Crect x='1005' y='240' width='176' height='76' rx='10'/%3E%3C/g%3E%3Cg fill='%2317251f' font-family='Arial' font-size='23' font-weight='700'%3E%3Ctext x='202' y='602'%3ERFQ%3C/text%3E%3Ctext x='470' y='531'%3ECost%3C/text%3E%3Ctext x='750' y='387'%3ESOP%3C/text%3E%3Ctext x='1032' y='286'%3EEOP%3C/text%3E%3C/g%3E%3Ccircle cx='1215' cy='550' r='95' fill='%23ffffff' opacity='0.48'/%3E%3Ccircle cx='1186' cy='550' r='28' fill='%231d7a63'/%3E%3Ccircle cx='1250' cy='550' r='28' fill='%231b6f83'/%3E%3Cpath d='M1186 550h64' stroke='%2317251f' stroke-width='8' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: cover;
+      background-position: center;
+      color: #f6fbf8;
+    }
+
+    .hero-content {
+      max-width: 980px;
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      font-size: 14px;
+      color: #bfe0d4;
+      font-weight: 700;
+    }
+
+    .hero h2 {
+      max-width: 850px;
+      margin: 0;
+      font-size: clamp(38px, 7vw, 78px);
+      line-height: 1.05;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+
+    .hero-lead {
+      max-width: 760px;
+      margin: 22px 0 0;
+      color: #dcece6;
+      font-size: 18px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 32px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 30px;
+      padding: 5px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 999px;
+      color: #ecf7f3;
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    section {
+      padding: 70px min(7vw, 86px);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.36);
+    }
+
+    section:nth-child(odd) {
+      background: rgba(247, 249, 247, 0.72);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(220px, 0.45fr);
+      gap: 32px;
+      align-items: end;
+      margin-bottom: 30px;
+    }
+
+    .section-number {
+      color: var(--green);
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    h3 {
+      margin: 5px 0 0;
+      font-size: clamp(26px, 3.4vw, 42px);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h4 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .metric {
+      display: block;
+      color: var(--green-dark);
+      font-size: 32px;
+      line-height: 1;
+      font-weight: 850;
+      margin-bottom: 8px;
+    }
+
+    .keyword-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .keyword-cloud span {
+      padding: 9px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--green-dark);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+      counter-reset: step;
+    }
+
+    .step {
+      min-height: 138px;
+      position: relative;
+      padding: 18px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step, decimal-leading-zero);
+      display: block;
+      color: var(--green);
+      font-weight: 850;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .step strong {
+      display: block;
+      font-size: 16px;
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+
+    .step span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    th,
+    td {
+      padding: 15px 16px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+    }
+
+    th {
+      background: #eaf2ee;
+      color: var(--green-dark);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    td strong {
+      color: var(--ink);
+    }
+
+    .case-band {
+      display: grid;
+      grid-template-columns: minmax(0, 0.7fr) minmax(320px, 0.3fr);
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .part-visual {
+      min-height: 360px;
+      padding: 26px;
+      background: #10251f;
+      color: #eff8f4;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .part-visual svg {
+      width: 100%;
+      height: 250px;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .part-visual h4,
+    .part-visual p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .part-visual p {
+      color: #cfe4dc;
+      max-width: 620px;
+    }
+
+    .checklist {
+      display: grid;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .checklist li {
+      display: grid;
+      grid-template-columns: 22px minmax(0, 1fr);
+      gap: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .checklist li::before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      margin-top: 5px;
+      border-radius: 4px;
+      background: var(--green);
+      box-shadow: inset 0 0 0 4px #dcefe8;
+    }
+
+    .cost-wrap {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.42fr) minmax(0, 0.58fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .donut {
+      display: grid;
+      place-items: center;
+      min-height: 360px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .donut svg {
+      width: min(310px, 80%);
+      height: auto;
+    }
+
+    .legend {
+      display: grid;
+      gap: 8px;
+      margin-top: 14px;
+      width: min(320px, 86%);
+    }
+
+    .legend div {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .legend i {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      margin-right: 6px;
+    }
+
+    .strategy-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .strategy {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .strategy b {
+      color: var(--green-dark);
+    }
+
+    .strategy span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cbp {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .cbp-item {
+      min-height: 154px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .cbp-item h4 {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+
+    .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--green);
+      flex: 0 0 auto;
+    }
+
+    .cbp-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .scorecards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .supplier {
+      padding: 22px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .supplier-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .supplier h4 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .score {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--green);
+      font-weight: 850;
+      font-size: 20px;
+    }
+
+    .score.mid {
+      background: var(--blue);
+    }
+
+    .score.low {
+      background: var(--amber);
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 86px minmax(0, 1fr) 34px;
+      gap: 9px;
+      align-items: center;
+      margin: 9px 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .bar {
+      height: 8px;
+      border-radius: 999px;
+      background: #e7eeeb;
+      overflow: hidden;
+    }
+
+    .bar i {
+      display: block;
+      height: 100%;
+      background: var(--green);
+      border-radius: 999px;
+    }
+
+    .supplier p {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .collab {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.35fr) minmax(0, 0.65fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .hub {
+      display: grid;
+      place-items: center;
+      min-height: 340px;
+      border-radius: 8px;
+      color: #fff;
+      background:
+        radial-gradient(circle at center, rgba(255,255,255,0.14) 0 31%, transparent 32%),
+        #10251f;
+    }
+
+    .hub-center {
+      width: 168px;
+      height: 168px;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 18px;
+      font-weight: 850;
+      background: rgba(29, 122, 99, 0.8);
+    }
+
+    .departments {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .dept {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .dept b {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--green-dark);
+    }
+
+    .dept span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .closing {
+      background: #10251f;
+      color: #f3faf7;
+    }
+
+    .closing .section-head p,
+    .closing .card p {
+      color: #cfe4dc;
+    }
+
+    .closing .card {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.16);
+      box-shadow: none;
+    }
+
+    .closing h4 {
+      color: #fff;
+    }
+
+    .print-action {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 10;
+      width: 48px;
+      height: 48px;
+      border: 0;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--green);
+      box-shadow: 0 14px 36px rgba(16, 37, 31, 0.26);
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .print-action:hover {
+      background: var(--green-dark);
+    }
+
+    @media (max-width: 1080px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        display: none;
+      }
+
+      .section-head,
+      .case-band,
+      .cost-wrap,
+      .collab {
+        grid-template-columns: 1fr;
+      }
+
+      .process {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        min-height: 86vh;
+        padding: 42px 22px 34px;
+      }
+
+      section {
+        padding: 50px 22px;
+      }
+
+      .cols-3,
+      .cols-2,
+      .cbp,
+      .scorecards,
+      .departments,
+      .process {
+        grid-template-columns: 1fr;
+      }
+
+      .strategy {
+        grid-template-columns: 1fr;
+      }
+
+      th,
+      td {
+        padding: 12px;
+      }
+
+      table,
+      thead,
+      tbody,
+      th,
+      td,
+      tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        border-bottom: 1px solid var(--line);
+      }
+
+      td {
+        border-bottom: 0;
+      }
+
+      td::before {
+        content: attr(data-label);
+        display: block;
+        color: var(--green-dark);
+        font-size: 12px;
+        font-weight: 800;
+        margin-bottom: 3px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .layout {
+        display: block;
+      }
+
+      aside,
+      .print-action {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        color: var(--ink);
+        background: #fff;
+        padding: 28px 0;
+      }
+
+      section {
+        padding: 26px 0;
+        break-inside: avoid;
+      }
+
+      .card,
+      table,
+      .supplier,
+      .donut {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="print-action" onclick="window.print()" title="打印或另存为 PDF" aria-label="打印或另存为 PDF">⎙</button>
+  <div class="layout">
+    <aside>
+      <div class="brand">
+        <div class="brand-mark">LY</div>
+        <h1>新能源汽车零部件采购岗位作品集</h1>
+        <p>柳毅 | 供应链采购流程与商务策略理解</p>
+      </div>
+      <nav aria-label="页面导航">
+        <a href="#match">岗位匹配</a>
+        <a href="#cycle">全周期采购理解</a>
+        <a href="#transfer">经历迁移</a>
+        <a href="#case">模拟案例</a>
+        <a href="#cost">成本与降本</a>
+        <a href="#cbp">CBP 小样</a>
+        <a href="#supplier">供应商管理</a>
+        <a href="#collab">跨部门协同</a>
+      </nav>
+      <div class="side-note">
+        说明：案例为基于公开岗位要求与个人经历构建的模拟分析，用于展示岗位理解，不代表真实主机厂项目。
+      </div>
+    </aside>
+
+    <main>
+      <header class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">NIO 采购工程师方向 | Portfolio</p>
+          <h2>从供应链流程执行，到新能源汽车零部件采购商务策略理解</h2>
+          <p class="hero-lead">
+            基于采购助理实习中的询价比价、合同订单、系统对账、流程风控经验，结合金融研究训练形成的行业分析与数据处理能力，构建一套面向新能源汽车采购工程师岗位的能力展示。
+          </p>
+          <div class="hero-meta">
+            <span class="tag">供应商沟通</span>
+            <span class="tag">合同与订单管理</span>
+            <span class="tag">成本评估</span>
+            <span class="tag">Commodity Business Plan</span>
+            <span class="tag">跨部门协同</span>
+          </div>
+        </div>
+      </header>
+
+      <section id="match">
+        <div class="section-head">
+          <div>
+            <div class="section-number">01 | 岗位匹配</div>
+            <h3>把采购岗位拆成可执行的能力模块</h3>
+          </div>
+          <p>蔚来采购工程师的核心不是单点下单，而是围绕零部件全生命周期承担商务责任，并在成本、质量、交付、合同和跨部门目标之间做平衡。</p>
+        </div>
+
+        <div class="grid cols-3">
+          <article class="card">
+            <span class="metric">20+</span>
+            <h4>采购项目推进</h4>
+            <p>在得联供应链实习中协助推进采购项目，接触需求对接、询价议价、比价单、采购单、系统录入与履约对账。</p>
+          </article>
+          <article class="card">
+            <span class="metric">120页</span>
+            <h4>SOP 流程沉淀</h4>
+            <p>离职前沉淀采购与销售助理日常流程，覆盖合同、订单、开票、归档、对账等环节，体现流程标准化意识。</p>
+          </article>
+          <article class="card">
+            <span class="metric">多方</span>
+            <h4>跨部门问题闭环</h4>
+            <p>识别 OA 收货金额异常累加问题，协调采购、业务、IT 排查并优化复核流程，降低对账与支付风险。</p>
+          </article>
+        </div>
+
+        <div class="keyword-cloud" style="margin-top: 22px;">
+          <span>供应链开发</span>
+          <span>成本评估</span>
+          <span>定点定价</span>
+          <span>合同订单</span>
+          <span>量产保供</span>
+          <span>设变维护</span>
+          <span>售后件/EOP</span>
+          <span>供应商考评</span>
+          <span>跨部门协同</span>
+        </div>
+      </section>
+
+      <section id="cycle">
+        <div class="section-head">
+          <div>
+            <div class="section-number">02 | 全周期采购理解</div>
+            <h3>零部件采购工程师的工作链路</h3>
+          </div>
+          <p>采购工程师需要从预研阶段进入项目，持续跟踪到量产、售后和 EOP，既要懂商务，也要能推动问题在组织中闭环。</p>
+        </div>
+
+        <div class="process">
+          <div class="step"><strong>需求输入</strong><span>理解产品定义、工程规格、车型节点和年需求预测。</span></div>
+          <div class="step"><strong>供应市场调研</strong><span>识别供应格局、区域产能、核心原材料和潜在风险。</span></div>
+          <div class="step"><strong>供应商寻源</strong><span>建立候选池，评估质量体系、配套经验、产能和响应速度。</span></div>
+          <div class="step"><strong>RFQ 询报价</strong><span>明确图纸、BOM、交付、账期、样件节点和报价模板。</span></div>
+          <div class="step"><strong>成本评估</strong><span>拆解材料、人工、制造、物流、利润，形成 should-cost 判断。</span></div>
+          <div class="step"><strong>定点定价</strong><span>结合价格、质量、交付、风险和战略匹配完成商务决策。</span></div>
+          <div class="step"><strong>合同订单</strong><span>维护合同、订单、发票、支付、台账和系统信息准确性。</span></div>
+          <div class="step"><strong>投产保供</strong><span>跟踪 SOP 节点、爬坡产能、交付异常和库存风险。</span></div>
+          <div class="step"><strong>设变维护</strong><span>与工程、质量、项目协同处理 ECN 影响和价格变化。</span></div>
+          <div class="step"><strong>售后与 EOP</strong><span>保障售后件供应，管理生命周期末端库存与商务收尾。</span></div>
+        </div>
+      </section>
+
+      <section id="transfer">
+        <div class="section-head">
+          <div>
+            <div class="section-number">03 | 经历迁移</div>
+            <h3>我的供应链实习如何对应采购 JD</h3>
+          </div>
+          <p>我目前的优势不是“已有整车采购项目”，而是已经接触过采购商务流程的基础动作，并能把流程、数据和风险意识迁移到汽车零部件采购场景。</p>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>JD 要求</th>
+              <th>已有经历</th>
+              <th>迁移到新能源采购岗位</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="JD 要求"><strong>供应链开发、询报价、定点前商务支持</strong></td>
+              <td data-label="已有经历">对接业务需求方，向供应商询价议价，制作比价单和采购单。</td>
+              <td data-label="迁移到新能源采购岗位">可快速参与 RFQ 信息收集、报价对比、供应商初筛和商务沟通。</td>
+            </tr>
+            <tr>
+              <td data-label="JD 要求"><strong>合同、订单、支付和系统管理</strong></td>
+              <td data-label="已有经历">录入项目、供应商、订单信息，进行系统对账，整理采购合同和合作协议。</td>
+              <td data-label="迁移到新能源采购岗位">具备合同台账、订单准确性、流程节点和支付风险意识。</td>
+            </tr>
+            <tr>
+              <td data-label="JD 要求"><strong>跨部门协调</strong></td>
+              <td data-label="已有经历">协调采购、业务、IT 处理 OA 收货金额异常累加问题。</td>
+              <td data-label="迁移到新能源采购岗位">能在工程、质量、项目、财务、物流之间推动信息对齐和问题闭环。</td>
+            </tr>
+            <tr>
+              <td data-label="JD 要求"><strong>流程维护和持续优化</strong></td>
+              <td data-label="已有经历">输出 120 页采购与销售助理 SOP 手册，规范日常操作。</td>
+              <td data-label="迁移到新能源采购岗位">适合承担采购流程文档、供应商库、考评表和项目复盘沉淀。</td>
+            </tr>
+            <tr>
+              <td data-label="JD 要求"><strong>成本分析和商务策略</strong></td>
+              <td data-label="已有经历">证券研究中做行业上下游、估值模型、数据自动化和专题分析。</td>
+              <td data-label="迁移到新能源采购岗位">能将研究能力转化为供应市场分析、成本驱动拆解和品类策略判断。</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="case">
+        <div class="section-head">
+          <div>
+            <div class="section-number">04 | 模拟案例</div>
+            <h3>低压线束采购全流程模拟</h3>
+          </div>
+          <p>选择低压线束作为案例，是因为它既有材料、人工、连接器、交付和设变等典型采购要素，又不会过度依赖电池电驱等深技术背景。</p>
+        </div>
+
+        <div class="case-band">
+          <div class="part-visual">
+            <h4>零部件对象：低压线束</h4>
+            <p>用于整车低压电源和信号连接，采购管理重点包括图纸/BOM 准确性、样件节点、铜材和连接器成本、供应商产能、交付稳定性及设变响应。</p>
+            <svg viewBox="0 0 760 260" role="img" aria-label="低压线束示意图">
+              <defs>
+                <linearGradient id="wire" x1="0" x2="1">
+                  <stop offset="0" stop-color="#37b990"/>
+                  <stop offset="1" stop-color="#65a5d8"/>
+                </linearGradient>
+              </defs>
+              <path d="M82 130 C180 50 305 66 374 126 C445 188 548 192 680 72" fill="none" stroke="url(#wire)" stroke-width="18" stroke-linecap="round"/>
+              <path d="M82 154 C170 180 284 172 373 130 C470 84 575 114 682 190" fill="none" stroke="#e7f3ee" stroke-width="8" stroke-linecap="round" opacity="0.9"/>
+              <rect x="36" y="103" width="92" height="58" rx="8" fill="#ffffff" stroke="#cfe4dc" stroke-width="4"/>
+              <rect x="645" y="43" width="90" height="58" rx="8" fill="#ffffff" stroke="#cfe4dc" stroke-width="4"/>
+              <rect x="650" y="163" width="86" height="58" rx="8" fill="#ffffff" stroke="#cfe4dc" stroke-width="4"/>
+              <circle cx="374" cy="130" r="24" fill="#1d7a63" stroke="#ffffff" stroke-width="5"/>
+              <text x="50" y="138" fill="#10251f" font-size="18" font-weight="700">ECU</text>
+              <text x="662" y="79" fill="#10251f" font-size="16" font-weight="700">Sensor</text>
+              <text x="665" y="199" fill="#10251f" font-size="16" font-weight="700">Power</text>
+            </svg>
+          </div>
+
+          <div class="card">
+            <h4>RFQ 信息清单</h4>
+            <ul class="checklist">
+              <li>车型项目、SOP 时间、年需求量和爬坡节奏</li>
+              <li>图纸、BOM、线径、长度、端子和连接器规格</li>
+              <li>样件、OTS、PPAP、量产交付节点</li>
+              <li>交付地点、包装方式、物流责任划分</li>
+              <li>报价模板、付款条件、税率、账期和币种</li>
+              <li>质量体系、产能证明、主机厂配套经验</li>
+              <li>设变响应机制和模具、工装费用处理方式</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="cost">
+        <div class="section-head">
+          <div>
+            <div class="section-number">05 | 成本评估</div>
+            <h3>从报价对比到 should-cost 判断</h3>
+          </div>
+          <p>采购降本不能只压单价，需要先理解成本构成，再判断哪些部分能通过设计优化、供应策略、商务条款或运营改善来降低。</p>
+        </div>
+
+        <div class="cost-wrap">
+          <div class="donut">
+            <svg viewBox="0 0 240 240" aria-label="低压线束成本结构图">
+              <circle cx="120" cy="120" r="82" fill="none" stroke="#dfe8e4" stroke-width="36"/>
+              <circle cx="120" cy="120" r="82" fill="none" stroke="#1d7a63" stroke-width="36" stroke-dasharray="154 515" stroke-dashoffset="0" transform="rotate(-90 120 120)"/>
+              <circle cx="120" cy="120" r="82" fill="none" stroke="#285f9f" stroke-width="36" stroke-dasharray="103 515" stroke-dashoffset="-154" transform="rotate(-90 120 120)"/>
+              <circle cx="120" cy="120" r="82" fill="none" stroke="#1b6f83" stroke-width="36" stroke-dasharray="77 515" stroke-dashoffset="-257" transform="rotate(-90 120 120)"/>
+              <circle cx="120" cy="120" r="82" fill="none" stroke="#b56b1f" stroke-width="36" stroke-dasharray="67 515" stroke-dashoffset="-334" transform="rotate(-90 120 120)"/>
+              <circle cx="120" cy="120" r="82" fill="none" stroke="#9f3a35" stroke-width="36" stroke-dasharray="51 515" stroke-dashoffset="-401" transform="rotate(-90 120 120)"/>
+              <text x="120" y="112" text-anchor="middle" fill="#17211f" font-size="18" font-weight="800">Cost</text>
+              <text x="120" y="136" text-anchor="middle" fill="#60706b" font-size="12">结构拆解</text>
+            </svg>
+            <div class="legend">
+              <div><span><i style="background:#1d7a63"></i>铜材/线材</span><b>30%</b></div>
+              <div><span><i style="background:#285f9f"></i>连接器/端子</span><b>20%</b></div>
+              <div><span><i style="background:#1b6f83"></i>人工与制造</span><b>15%</b></div>
+              <div><span><i style="background:#b56b1f"></i>物流/包装</span><b>13%</b></div>
+              <div><span><i style="background:#9f3a35"></i>管理费用/利润</span><b>10%</b></div>
+              <div><span><i style="background:#dfe8e4"></i>损耗/税费/其他</span><b>12%</b></div>
+            </div>
+          </div>
+
+          <div class="strategy-list">
+            <div class="strategy">
+              <b>设计端</b>
+              <span>与工程评估线径、长度、连接器规格和布置方案，避免过度设计带来的材料浪费。</span>
+            </div>
+            <div class="strategy">
+              <b>供应端</b>
+              <span>引入多供应商比价和 should-cost 模板，识别报价差异来自材料、工艺、物流还是利润空间。</span>
+            </div>
+            <div class="strategy">
+              <b>商务端</b>
+              <span>设置年度框架协议、阶梯价格、账期优化和关键原材料价格联动机制。</span>
+            </div>
+            <div class="strategy">
+              <b>物流端</b>
+              <span>评估就近供货、本地仓、批量交付和包装复用，降低运输与库存占用成本。</span>
+            </div>
+            <div class="strategy">
+              <b>质量端</b>
+              <span>通过来料质量、返工、索赔和售后问题复盘识别隐性质量成本。</span>
+            </div>
+            <div class="strategy">
+              <b>设变端</b>
+              <span>建立 ECN 成本评估规则，区分材料变更、工装变更、库存报废和供应商索赔。</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cbp">
+        <div class="section-head">
+          <div>
+            <div class="section-number">06 | Commodity Business Plan</div>
+            <h3>低压线束品类商务计划小样</h3>
+          </div>
+          <p>CBP 的价值在于把“项目采购”提升为“品类经营”：提前看清需求、供应格局、成本驱动、风险和年度商务策略。</p>
+        </div>
+
+        <div class="cbp">
+          <article class="cbp-item">
+            <h4><span class="dot"></span>品类定义</h4>
+            <p>低压线束及相关端子、连接器、护套、扎带、保护管和包装，覆盖样件、量产件、售后件。</p>
+          </article>
+          <article class="cbp-item">
+            <h4><span class="dot"></span>需求预测</h4>
+            <p>按车型项目、SOP 节点、年度销量预测和爬坡计划拆分需求，识别高峰产能和安全库存要求。</p>
+          </article>
+          <article class="cbp-item">
+            <h4><span class="dot"></span>市场趋势</h4>
+            <p>关注铜价、连接器国产化、区域供货半径、自动化加工能力和主机厂配套资源竞争。</p>
+          </article>
+          <article class="cbp-item">
+            <h4><span class="dot"></span>成本驱动</h4>
+            <p>线材长度、铜价、连接器规格、人工工时、良率、物流距离和设变频次共同决定总成本。</p>
+          </article>
+          <article class="cbp-item">
+            <h4><span class="dot"></span>供应商策略</h4>
+            <p>核心供应商参与早期开发，备选供应商保持价格竞争，风险供应商进入整改或限制导入清单。</p>
+          </article>
+          <article class="cbp-item">
+            <h4><span class="dot"></span>年度目标</h4>
+            <p>围绕降本、保供、质量改善、价格透明化、合同标准化和供应商绩效提升建立专项跟踪表。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="supplier">
+        <div class="section-head">
+          <div>
+            <div class="section-number">07 | 供应商管理</div>
+            <h3>合作伙伴库与评分卡设计</h3>
+          </div>
+          <p>供应商库不是通讯录，而是采购策略的底层数据资产。评分卡需要服务于准入、定点、年度考评和风险预警。</p>
+        </div>
+
+        <div class="scorecards">
+          <article class="supplier">
+            <div class="supplier-head">
+              <h4>供应商 A</h4>
+              <div class="score">88</div>
+            </div>
+            <div class="bar-row"><span>价格</span><div class="bar"><i style="width:84%"></i></div><b>84</b></div>
+            <div class="bar-row"><span>质量</span><div class="bar"><i style="width:92%"></i></div><b>92</b></div>
+            <div class="bar-row"><span>交付</span><div class="bar"><i style="width:88%"></i></div><b>88</b></div>
+            <div class="bar-row"><span>设变响应</span><div class="bar"><i style="width:86%"></i></div><b>86</b></div>
+            <p><strong>策略：</strong>核心合作，参与早期开发和年度框架协议谈判。</p>
+          </article>
+
+          <article class="supplier">
+            <div class="supplier-head">
+              <h4>供应商 B</h4>
+              <div class="score mid">79</div>
+            </div>
+            <div class="bar-row"><span>价格</span><div class="bar"><i style="width:90%"></i></div><b>90</b></div>
+            <div class="bar-row"><span>质量</span><div class="bar"><i style="width:76%"></i></div><b>76</b></div>
+            <div class="bar-row"><span>交付</span><div class="bar"><i style="width:74%"></i></div><b>74</b></div>
+            <div class="bar-row"><span>设变响应</span><div class="bar"><i style="width:78%"></i></div><b>78</b></div>
+            <p><strong>策略：</strong>备选供应，保持价格竞争，需跟踪交付稳定性。</p>
+          </article>
+
+          <article class="supplier">
+            <div class="supplier-head">
+              <h4>供应商 C</h4>
+              <div class="score low">68</div>
+            </div>
+            <div class="bar-row"><span>价格</span><div class="bar"><i style="width:72%"></i></div><b>72</b></div>
+            <div class="bar-row"><span>质量</span><div class="bar"><i style="width:64%"></i></div><b>64</b></div>
+            <div class="bar-row"><span>交付</span><div class="bar"><i style="width:70%"></i></div><b>70</b></div>
+            <div class="bar-row"><span>设变响应</span><div class="bar"><i style="width:62%"></i></div><b>62</b></div>
+            <p><strong>策略：</strong>观察整改，限制新项目导入，重点验证质量与响应问题。</p>
+          </article>
+        </div>
+
+        <table style="margin-top: 18px;">
+          <thead>
+            <tr>
+              <th>评分维度</th>
+              <th>权重</th>
+              <th>采购关注点</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="评分维度">价格竞争力</td><td data-label="权重">25%</td><td data-label="采购关注点">报价透明度、should-cost 偏差、年度降本空间。</td></tr>
+            <tr><td data-label="评分维度">质量能力</td><td data-label="权重">25%</td><td data-label="采购关注点">质量体系、PPAP 通过率、来料不良、整改闭环。</td></tr>
+            <tr><td data-label="评分维度">交付能力</td><td data-label="权重">20%</td><td data-label="采购关注点">产能、交付准时率、库存方案、物流半径。</td></tr>
+            <tr><td data-label="评分维度">技术与设变响应</td><td data-label="权重">15%</td><td data-label="采购关注点">样件速度、工程支持、ECN 报价和变更周期。</td></tr>
+            <tr><td data-label="评分维度">财务与合规</td><td data-label="权重">10%</td><td data-label="采购关注点">履约稳定性、合同合规、付款与税务风险。</td></tr>
+            <tr><td data-label="评分维度">协同配合度</td><td data-label="权重">5%</td><td data-label="采购关注点">沟通效率、信息透明度、问题响应态度。</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="collab">
+        <div class="section-head">
+          <div>
+            <div class="section-number">08 | 跨部门协同</div>
+            <h3>采购工程师是商务目标的项目推进者</h3>
+          </div>
+          <p>我在得联供应链中最有价值的沉淀，是意识到采购问题通常不是单部门问题。系统、合同、订单、收货、付款和业务需求必须一起对齐。</p>
+        </div>
+
+        <div class="collab">
+          <div class="hub">
+            <div class="hub-center">采购工程师<br>商务责任中心</div>
+          </div>
+          <div class="departments">
+            <div class="dept"><b>工程</b><span>图纸、规格、BOM、设变影响评估。</span></div>
+            <div class="dept"><b>质量</b><span>准入审核、PPAP、来料质量、8D 整改。</span></div>
+            <div class="dept"><b>项目</b><span>车型节点、SOP、样件和量产爬坡计划。</span></div>
+            <div class="dept"><b>财务</b><span>预算、付款、成本核算、发票与账期。</span></div>
+            <div class="dept"><b>物流</b><span>交付计划、库存、运输、包装和仓储。</span></div>
+            <div class="dept"><b>制造</b><span>现场节拍、缺件预警、返工和量产问题。</span></div>
+            <div class="dept"><b>法务</b><span>合同条款、违约责任、保密和合规要求。</span></div>
+            <div class="dept"><b>供应商</b><span>报价、交付、质量改善、设变响应。</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing">
+        <div class="section-head">
+          <div>
+            <div class="section-number">09 | 个人能力总结</div>
+            <h3>我能为新能源汽车采购岗位带来的能力</h3>
+          </div>
+          <p>定位不是“已经完整做过零部件采购”，而是“具备采购流程基础、数据分析能力和快速学习迁移能力，能在岗位中快速补齐产品知识并承担执行与分析任务”。</p>
+        </div>
+
+        <div class="grid cols-3">
+          <article class="card">
+            <h4>采购流程执行</h4>
+            <p>询价、议价、比价单、采购单、订单录入、系统对账和合同归档已有实操基础。</p>
+          </article>
+          <article class="card">
+            <h4>流程与风险意识</h4>
+            <p>曾识别 OA 系统金额异常并推动复核流程优化，重视数据准确性和支付风险。</p>
+          </article>
+          <article class="card">
+            <h4>数据分析能力</h4>
+            <p>熟悉 Excel、Python、VBA、Wind/iFind，能支持成本拆解、供应市场和品类策略分析。</p>
+          </article>
+          <article class="card">
+            <h4>供应商沟通</h4>
+            <p>有供应商询价议价、商务接待和跨部门信息同步经验，能够承担基础商务沟通。</p>
+          </article>
+          <article class="card">
+            <h4>文档沉淀</h4>
+            <p>输出过 120 页 SOP 手册，适合维护采购台账、供应商库、考评表和项目复盘材料。</p>
+          </article>
+          <article class="card">
+            <h4>学习迁移</h4>
+            <p>能把金融研究中的行业分析、价格逻辑和结构化表达迁移到零部件采购场景。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
