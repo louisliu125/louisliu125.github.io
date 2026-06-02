@@ -1,0 +1,1199 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新能源车型上市营销作战台 | Vibe MKT Portfolio</title>
+  <style>
+:root {
+  --bg: #f5f7f8;
+  --surface: #ffffff;
+  --surface-2: #eef3f4;
+  --line: #dbe3e5;
+  --line-strong: #b9c8cc;
+  --ink: #182423;
+  --muted: #667477;
+  --muted-2: #8b989b;
+  --teal: #0f766e;
+  --teal-2: #dff1ee;
+  --blue: #2f6f9f;
+  --blue-2: #e2edf5;
+  --coral: #e45f3d;
+  --coral-2: #fde9e2;
+  --amber: #b98119;
+  --amber-2: #fff3d7;
+  --green: #377d4f;
+  --green-2: #e3f2e7;
+  --shadow: 0 18px 48px rgba(34, 50, 52, 0.08);
+  --radius: 8px;
+  --font: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font);
+  color: var(--ink);
+  background:
+    linear-gradient(180deg, #f9fbfb 0%, var(--bg) 34%, #eef3f4 100%);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px clamp(18px, 4vw, 44px);
+  background: rgba(249, 251, 251, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+}
+
+.eyebrow,
+.section-kicker,
+.mini-label,
+.status-label {
+  margin: 0;
+  color: var(--muted-2);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin: 3px 0 0;
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.topbar-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.primary-button,
+.secondary-button,
+.icon-button {
+  min-height: 36px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 0 14px;
+  color: var(--ink);
+  background: var(--surface);
+  transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.primary-button {
+  color: #ffffff;
+  background: var(--teal);
+}
+
+.secondary-button {
+  border-color: var(--line-strong);
+}
+
+.icon-button {
+  border-color: var(--line-strong);
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+.icon-button:hover,
+.toggle:hover,
+.stage-tab:hover,
+.persona-tab:hover {
+  transform: translateY(-1px);
+}
+
+.app-shell {
+  width: min(1460px, calc(100% - 36px));
+  margin: 22px auto 40px;
+}
+
+.status-strip {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr 1fr 1fr;
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--line);
+  box-shadow: var(--shadow);
+}
+
+.status-strip > div {
+  min-width: 0;
+  padding: 13px 16px;
+  background: var(--surface);
+}
+
+.status-strip strong {
+  display: block;
+  margin-top: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(430px, 1.55fr) minmax(280px, 0.95fr);
+  gap: 16px;
+  margin-top: 16px;
+  align-items: start;
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.9fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.panel-heading {
+  padding: 18px 18px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.inline-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.control-panel {
+  padding-bottom: 16px;
+}
+
+.field,
+.slider-field,
+.channel-control {
+  display: block;
+  padding: 14px 18px 0;
+}
+
+.field span,
+.field-row span {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  height: 38px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  padding: 0 10px;
+  color: var(--ink);
+  background: #fbfdfd;
+  outline: none;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
+}
+
+.field-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.field-row strong {
+  color: var(--teal);
+  font-size: 13px;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: var(--teal);
+}
+
+.toggle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.toggle {
+  min-height: 34px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  color: var(--muted);
+  background: #fbfdfd;
+}
+
+.toggle.active {
+  border-color: rgba(15, 118, 110, 0.5);
+  color: var(--teal);
+  background: var(--teal-2);
+  font-weight: 700;
+}
+
+.flow-panel {
+  overflow: hidden;
+}
+
+.live-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 0 10px;
+  border-radius: 999px;
+  color: var(--green);
+  background: var(--green-2);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.vehicle-visual {
+  padding: 14px 18px 0;
+}
+
+.vehicle-visual svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, #f7fbfb 0%, #edf5f6 100%);
+}
+
+.road {
+  fill: none;
+  stroke: #becbd0;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+.car-body {
+  fill: url("#paint");
+}
+
+.car-glass {
+  fill: url("#glass");
+  stroke: rgba(24, 36, 35, 0.2);
+  stroke-width: 2;
+}
+
+.wheel {
+  fill: #1d282b;
+}
+
+.hub {
+  fill: #edf3f4;
+}
+
+.signal {
+  fill: none;
+  stroke: rgba(47, 111, 159, 0.58);
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+.metrics rect {
+  fill: rgba(255, 255, 255, 0.82);
+  stroke: #d5e1e3;
+}
+
+.metrics text {
+  fill: var(--ink);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.metrics text + text {
+  fill: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.stage-tabs,
+.persona-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.stage-tab,
+.persona-tab {
+  min-height: 34px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  padding: 0 12px;
+  color: var(--muted);
+  background: #fbfdfd;
+}
+
+.stage-tab.active,
+.persona-tab.active {
+  border-color: var(--blue);
+  color: #1f5c84;
+  background: var(--blue-2);
+  font-weight: 800;
+}
+
+.stage-output {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 16px;
+  padding: 16px 18px 18px;
+}
+
+.task-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.task-list li {
+  min-height: 34px;
+  padding: 8px 10px;
+  border-left: 3px solid var(--teal);
+  border-radius: 6px;
+  background: var(--surface-2);
+  color: #334144;
+  font-size: 13px;
+}
+
+.brief-panel {
+  padding-bottom: 16px;
+}
+
+.brief-block {
+  padding: 14px 18px 0;
+}
+
+.brief-block span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--muted-2);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.brief-block p {
+  margin-bottom: 0;
+  color: #2b393b;
+  line-height: 1.58;
+  font-size: 14px;
+}
+
+.score-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 18px 18px 0;
+  padding: 14px;
+  border-radius: var(--radius);
+  background: linear-gradient(90deg, var(--teal-2), var(--amber-2));
+}
+
+.score-box span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.score-box strong {
+  color: var(--teal);
+  font-size: 34px;
+  line-height: 1;
+}
+
+.persona-panel {
+  min-height: 316px;
+}
+
+.persona-detail {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.9fr) minmax(240px, 1.1fr) minmax(220px, 0.8fr);
+  gap: 18px;
+  padding: 16px 18px 20px;
+}
+
+.persona-detail p {
+  color: #354548;
+  line-height: 1.7;
+}
+
+.persona-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-content: start;
+}
+
+.persona-tags span {
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 999px;
+  color: #1f5c84;
+  background: var(--blue-2);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.funnel {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+}
+
+.funnel-row {
+  display: grid;
+  grid-template-columns: 72px minmax(120px, 1fr) 76px;
+  gap: 12px;
+  align-items: center;
+}
+
+.funnel-row span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.funnel-row strong {
+  text-align: right;
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.bar {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--surface-2);
+}
+
+.bar i {
+  display: block;
+  width: var(--w);
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--teal), var(--coral));
+}
+
+.matrix-panel {
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+.matrix-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 13px 14px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+th {
+  color: var(--muted);
+  background: #f7fafb;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+td:first-child {
+  width: 110px;
+  color: var(--teal);
+  font-weight: 800;
+}
+
+.toast {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 20;
+  transform: translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+  min-width: 116px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  color: #ffffff;
+  background: #1d282b;
+  text-align: center;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 1180px) {
+  .workspace {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .brief-panel {
+    grid-column: 1 / -1;
+  }
+
+  .analysis-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 780px) {
+  .topbar {
+    position: static;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .topbar-actions {
+    width: 100%;
+  }
+
+  .topbar-actions button {
+    flex: 1;
+  }
+
+  .app-shell {
+    width: min(100% - 24px, 1460px);
+    margin-top: 12px;
+  }
+
+  .status-strip,
+  .workspace,
+  .analysis-grid,
+  .stage-output,
+  .persona-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .stage-tabs,
+  .persona-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  .stage-tab,
+  .persona-tab {
+    flex: 0 0 auto;
+  }
+
+  .toggle-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">VIBE MKT PORTFOLIO / NEV LAUNCH OS</p>
+      <h1>新能源车型上市营销作战台</h1>
+    </div>
+    <div class="topbar-actions">
+      <button class="icon-button" id="copyBrief" type="button" title="复制brief" aria-label="复制brief"><span>复制</span></button>
+      <button class="primary-button" id="exportPlan" type="button">导出方案</button>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <section class="status-strip" aria-label="项目状态">
+      <div><span class="status-label">车型</span><strong id="statusModel">银河 E5</strong></div>
+      <div><span class="status-label">定位</span><strong id="statusSegment">15-20万家庭智能纯电SUV</strong></div>
+      <div><span class="status-label">主用户</span><strong id="statusPersona">家庭增换购</strong></div>
+      <div><span class="status-label">当前阶段</span><strong id="statusStage">市场洞察</strong></div>
+    </section>
+
+    <section class="workspace">
+      <aside class="panel control-panel">
+        <div class="panel-heading">
+          <p class="section-kicker">01 / STRATEGY INPUT</p>
+          <h2>车型与战役参数</h2>
+        </div>
+        <label class="field"><span>车型名称</span><input id="modelName" type="text" value="银河 E5" maxlength="18"></label>
+        <label class="field">
+          <span>上市定位</span>
+          <select id="positioning">
+            <option value="family-suv">15-20万家庭智能纯电SUV</option>
+            <option value="urban-commuter">10-15万城市通勤纯电车</option>
+            <option value="premium-sedan">20-30万智能科技纯电轿车</option>
+            <option value="plug-hybrid">15-25万长续航插混SUV</option>
+          </select>
+        </label>
+        <label class="field"><span>核心卖点</span><input id="corePromise" type="text" value="安全好开、空间够用、智能不复杂" maxlength="34"></label>
+        <div class="slider-field">
+          <div class="field-row"><span>预算强度</span><strong id="budgetValue">中高</strong></div>
+          <input id="budget" type="range" min="1" max="5" value="4">
+        </div>
+        <div class="slider-field">
+          <div class="field-row"><span>上市节奏</span><strong id="tempoValue">标准</strong></div>
+          <input id="tempo" type="range" min="1" max="5" value="3">
+        </div>
+        <div class="channel-control" aria-label="渠道组合">
+          <div class="field-row"><span>渠道组合</span><strong id="channelCount">5项</strong></div>
+          <div class="toggle-grid">
+            <button class="toggle active" type="button" data-channel="小红书">小红书</button>
+            <button class="toggle active" type="button" data-channel="抖音">抖音</button>
+            <button class="toggle active" type="button" data-channel="B站">B站</button>
+            <button class="toggle active" type="button" data-channel="门店试驾">门店试驾</button>
+            <button class="toggle active" type="button" data-channel="私域社群">私域社群</button>
+            <button class="toggle" type="button" data-channel="车主共创">车主共创</button>
+          </div>
+        </div>
+      </aside>
+
+      <section class="panel flow-panel">
+        <div class="panel-heading inline-heading">
+          <div>
+            <p class="section-kicker">02 / LAUNCH FLOW</p>
+            <h2>从需求洞察到交付留存</h2>
+          </div>
+          <span class="live-tag">实时生成</span>
+        </div>
+        <div class="vehicle-visual" aria-label="新能源车营销资产示意">
+          <svg viewBox="0 0 840 300" role="img" aria-labelledby="vehicleTitle">
+            <title id="vehicleTitle">新能源车型与营销流程示意图</title>
+            <defs>
+              <linearGradient id="paint" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stop-color="#0f766e"/>
+                <stop offset="52%" stop-color="#2f6f9f"/>
+                <stop offset="100%" stop-color="#e45f3d"/>
+              </linearGradient>
+              <linearGradient id="glass" x1="0" x2="1">
+                <stop offset="0%" stop-color="#d9f2f0"/>
+                <stop offset="100%" stop-color="#f8fbff"/>
+              </linearGradient>
+            </defs>
+            <path class="road" d="M40 236 C210 210 322 210 464 232 C620 256 722 238 808 214"/>
+            <path class="car-body" d="M132 174 C166 122 222 96 310 92 L476 92 C540 96 584 118 626 166 L702 177 C726 181 743 196 748 216 L744 236 L104 236 L100 214 C104 192 114 180 132 174 Z"/>
+            <path class="car-glass" d="M276 111 L446 111 C493 113 529 129 562 166 L222 166 C236 139 252 122 276 111 Z"/>
+            <circle class="wheel" cx="222" cy="236" r="34"/>
+            <circle class="wheel" cx="618" cy="236" r="34"/>
+            <circle class="hub" cx="222" cy="236" r="13"/>
+            <circle class="hub" cx="618" cy="236" r="13"/>
+            <path class="signal" d="M104 152 C72 140 58 120 60 92"/>
+            <path class="signal" d="M738 162 C778 148 794 120 790 88"/>
+            <g class="metrics">
+              <rect x="54" y="34" width="156" height="56" rx="8"/>
+              <text x="74" y="58">用户评论洞察</text>
+              <text x="74" y="78">痛点 / 口碑 / 场景</text>
+              <rect x="344" y="24" width="154" height="58" rx="8"/>
+              <text x="364" y="49">车型卖点拆解</text>
+              <text x="364" y="69">续航 / 智舱 / 安全</text>
+              <rect x="618" y="36" width="162" height="56" rx="8"/>
+              <text x="638" y="60">线索转化闭环</text>
+              <text x="638" y="80">试驾 / 订购 / 留存</text>
+            </g>
+          </svg>
+        </div>
+        <div class="stage-tabs" role="tablist" aria-label="上市阶段">
+          <button class="stage-tab active" type="button" data-stage="insight">市场洞察</button>
+          <button class="stage-tab" type="button" data-stage="position">车型定位</button>
+          <button class="stage-tab" type="button" data-stage="preheat">内容预热</button>
+          <button class="stage-tab" type="button" data-stage="convert">上市转化</button>
+          <button class="stage-tab" type="button" data-stage="retain">交付留存</button>
+        </div>
+        <div class="stage-output">
+          <div><p class="mini-label">关键问题</p><h3 id="stageQuestion">用户为什么现在需要这台车？</h3></div>
+          <ul id="stageTasks" class="task-list"></ul>
+        </div>
+      </section>
+
+      <aside class="panel brief-panel">
+        <div class="panel-heading">
+          <p class="section-kicker">03 / AI BRIEF</p>
+          <h2>上市营销 Brief</h2>
+        </div>
+        <div class="brief-block"><span>目标人群</span><p id="briefAudience"></p></div>
+        <div class="brief-block"><span>传播主张</span><p id="briefClaim"></p></div>
+        <div class="brief-block"><span>首波内容钩子</span><p id="briefHook"></p></div>
+        <div class="brief-block"><span>转化动作</span><p id="briefAction"></p></div>
+        <div class="score-box"><span>战役完整度</span><strong id="readinessScore">82</strong></div>
+      </aside>
+    </section>
+
+    <section class="analysis-grid">
+      <div class="panel persona-panel">
+        <div class="panel-heading inline-heading">
+          <div><p class="section-kicker">04 / USER OPS</p><h2>用户画像与触达策略</h2></div>
+        </div>
+        <div class="persona-tabs" role="tablist" aria-label="用户画像">
+          <button class="persona-tab active" type="button" data-persona="family">家庭增换购</button>
+          <button class="persona-tab" type="button" data-persona="first">都市首购</button>
+          <button class="persona-tab" type="button" data-persona="tech">科技尝鲜</button>
+          <button class="persona-tab" type="button" data-persona="commute">下沉通勤</button>
+        </div>
+        <div class="persona-detail">
+          <div><p class="mini-label">核心痛点</p><h3 id="personaPain"></h3></div>
+          <div><p class="mini-label">触达话术</p><p id="personaMessage"></p></div>
+          <div class="persona-tags" id="personaTags"></div>
+        </div>
+      </div>
+      <div class="panel kpi-panel">
+        <div class="panel-heading">
+          <p class="section-kicker">05 / KPI LOOP</p>
+          <h2>上市漏斗看板</h2>
+        </div>
+        <div class="funnel">
+          <div class="funnel-row"><span>声量曝光</span><div class="bar"><i style="--w: 92%"></i></div><strong id="kpiAwareness">1200万+</strong></div>
+          <div class="funnel-row"><span>内容互动</span><div class="bar"><i style="--w: 72%"></i></div><strong id="kpiEngagement">38万+</strong></div>
+          <div class="funnel-row"><span>试驾线索</span><div class="bar"><i style="--w: 58%"></i></div><strong id="kpiLeads">1.6万+</strong></div>
+          <div class="funnel-row"><span>订单转化</span><div class="bar"><i style="--w: 36%"></i></div><strong id="kpiOrders">3200+</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel matrix-panel">
+      <div class="panel-heading inline-heading">
+        <div><p class="section-kicker">06 / CONTENT MATRIX</p><h2>分阶段内容与渠道矩阵</h2></div>
+        <button class="secondary-button" id="refreshIdeas" type="button">换一版内容</button>
+      </div>
+      <div class="matrix-wrap">
+        <table>
+          <thead><tr><th>阶段</th><th>目标</th><th>内容主题</th><th>渠道动作</th><th>复盘指标</th></tr></thead>
+          <tbody id="contentMatrix"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">已复制</div>
+  <script>
+const state = {
+  modelName: "银河 E5",
+  positioning: "family-suv",
+  corePromise: "安全好开、空间够用、智能不复杂",
+  budget: 4,
+  tempo: 3,
+  stage: "insight",
+  persona: "family",
+  ideaVersion: 0,
+  channels: ["小红书", "抖音", "B站", "门店试驾", "私域社群"],
+};
+
+const positioningMap = {
+  "family-suv": {
+    label: "15-20万家庭智能纯电SUV",
+    audience: "家庭增换购用户、年轻爸妈、周末短途出行人群",
+    claim: "把智能、安全和空间做成全家都容易感知的日常价值。",
+    hook: "用真实家庭场景对比油车换电车后的通勤、补能、儿童乘坐和储物体验。",
+    action: "小红书种草收集关注，抖音短视频放大场景，门店试驾承接线索，私域社群完成权益解释和订金转化。",
+    kpi: ["1200万+", "38万+", "1.6万+", "3200+"],
+  },
+  "urban-commuter": {
+    label: "10-15万城市通勤纯电车",
+    audience: "都市首购、女性通勤、租房青年和小家庭第二台车用户",
+    claim: "把每天上下班的成本、停车、补能和安全感变得更轻。",
+    hook: "用一周通勤账本、停车挑战和夜间安全路线测试做内容连续剧。",
+    action: "抖音制造短场景记忆点，小红书沉淀用车攻略，商圈快闪试驾收集高意向线索。",
+    kpi: ["850万+", "29万+", "9800+", "2100+"],
+  },
+  "premium-sedan": {
+    label: "20-30万智能科技纯电轿车",
+    audience: "科技尝鲜用户、职场进阶人群、智能座舱与辅助驾驶关注者",
+    claim: "用高阶智能体验表达审美、效率和长期价值。",
+    hook: "把智能座舱、辅助驾驶和高速能耗做成可验证的挑战内容。",
+    action: "B站深度评测建立信任，抖音传播科技亮点，车主共创强化口碑，城市试驾日推动下订。",
+    kpi: ["1500万+", "45万+", "1.9万+", "3900+"],
+  },
+  "plug-hybrid": {
+    label: "15-25万长续航插混SUV",
+    audience: "里程焦虑用户、跨城通勤家庭、自驾游和下沉市场增换购用户",
+    claim: "让用户同时拥有电车低成本和油车远行安全感。",
+    hook: "用长途返乡、自驾露营和低电量通勤测试回应真实顾虑。",
+    action: "短视频验证续航，区域门店试驾承接，私域社群拆解补能和保养成本，老车置换权益促转化。",
+    kpi: ["1100万+", "34万+", "1.4万+", "3000+"],
+  },
+};
+
+const stages = {
+  insight: {
+    label: "市场洞察",
+    question: "用户为什么现在需要这台车？",
+    tasks: [
+      "抓取竞品发布会、懂车帝/小红书/抖音评论，归类高频痛点与购买阻力",
+      "按价格带、能源形式、家庭结构和城市级别拆分人群需求",
+      "输出需求雷达：安全、续航、补能、空间、智能座舱、品牌信任",
+    ],
+  },
+  position: {
+    label: "车型定位",
+    question: "这台车凭什么进入用户候选清单？",
+    tasks: [
+      "把产品参数翻译成用户可感知利益点，形成3个核心购买理由",
+      "建立竞品对照表，明确价格、配置、权益和传播差异点",
+      "生成上市主张、传播关键词和门店销售话术版本",
+    ],
+  },
+  preheat: {
+    label: "内容预热",
+    question: "如何先制造讨论，再承接搜索？",
+    tasks: [
+      "规划倒计时内容：场景短片、KOC试驾笔记、工程师问答、权益预告",
+      "为小红书/抖音/B站生成不同语气的标题、脚本和封面文案",
+      "用A/B测试筛选高点击卖点，把评论反向反馈给产品和销售端",
+    ],
+  },
+  convert: {
+    label: "上市转化",
+    question: "如何把内容热度变成试驾和订单？",
+    tasks: [
+      "将高意向用户按预算、家庭场景、竞品对比需求分层触达",
+      "门店试驾承接统一话术，私域社群解释权益、金融方案和交付周期",
+      "监控曝光、互动、留资、试驾、订金的漏斗流失点并日更复盘",
+    ],
+  },
+  retain: {
+    label: "交付留存",
+    question: "如何让第一批车主成为第二波传播资产？",
+    tasks: [
+      "建立交付后7/30/90天用户回访，收集真实口碑和负反馈",
+      "筛选高质量车主故事，转化为内容素材、门店案例和社群话题",
+      "联动售后优化问题闭环，形成NPS、复购、转介绍运营机制",
+    ],
+  },
+};
+
+const personas = {
+  family: {
+    label: "家庭增换购",
+    pain: "担心安全、空间、补能和老人小孩乘坐体验，换车决策链条长。",
+    message: "不用把家人迁就给车，日常通勤、周末出游和临时装载都能稳定覆盖。",
+    tags: ["儿童座椅", "后排舒适", "安全辅助", "周末出游", "置换权益"],
+  },
+  first: {
+    label: "都市首购",
+    pain: "预算敏感，怕后期养车麻烦，也怕第一台车买错。",
+    message: "把买车后的麻烦前置算清楚，用低成本通勤和轻松补能降低决策压力。",
+    tags: ["通勤成本", "停车便利", "首付压力", "颜值表达", "新手友好"],
+  },
+  tech: {
+    label: "科技尝鲜",
+    pain: "关注智能座舱和辅助驾驶，但讨厌空泛堆配置。",
+    message: "让智能变成可验证的效率体验，而不是参数表里的名词堆叠。",
+    tags: ["智能座舱", "辅助驾驶", "OTA", "性能测试", "科技评测"],
+  },
+  commute: {
+    label: "下沉通勤",
+    pain: "路况复杂、充电设施不均衡，既看重省钱也看重可靠。",
+    message: "低成本通勤之外，也要能跑远、能装、能应付多场景家庭使用。",
+    tags: ["可靠续航", "保养成本", "乡镇补能", "空间实用", "口碑背书"],
+  },
+};
+
+const matrixVersions = [
+  [
+    ["洞察期", "找到真实购买阻力", "竞品评论热词、家庭用车痛点、补能焦虑地图", "社媒聆听 + 用户访谈 + 门店销售反馈", "高频痛点覆盖率"],
+    ["预热期", "建立搜索心智", "真实家庭一周用车、通勤成本账本、智能座舱挑战", "小红书笔记 + 抖音短视频 + B站测评", "搜索指数 / 收藏率"],
+    ["发布期", "集中释放卖点", "价格权益、核心配置、竞品对比、上市直播切片", "发布会直播 + 信息流投放 + 媒体/KOL扩散", "曝光 / 互动 / 留资"],
+    ["转化期", "推动试驾下订", "试驾路线、金融权益、置换计算器、门店成交案例", "门店试驾 + 私域社群 + 区域投放", "试驾率 / 订金率"],
+    ["留存期", "沉淀车主口碑", "交付故事、真实能耗、售后问题闭环、车主共创", "车主社群 + 服务号 + KOC共创", "NPS / 转介绍"],
+  ],
+  [
+    ["洞察期", "识别差异机会", "价格带空白、家庭购车决策链、竞品差评反向机会", "公开数据监测 + 评论聚类 + 销售访谈", "机会点命中率"],
+    ["预热期", "制造第一波讨论", "一条视频讲清楚换车理由、三类家庭场景拆解", "抖音挑战 + 小红书合集 + KOC试驾", "完播率 / 互动率"],
+    ["发布期", "把配置转成利益", "续航不是数字、智能不是炫技、安全不是口号", "发布会素材二创 + 达人矩阵 + 搜索广告", "品牌词搜索增幅"],
+    ["转化期", "降低临门一脚阻力", "竞品对比卡、权益FAQ、试驾后跟进话术", "私域SOP + 门店活动 + 短信/企微触达", "线索到店率"],
+    ["留存期", "放大首批用户声音", "真实交付日记、售后响应记录、长期用车成本", "车主故事 + 社群运营 + 售后联动", "复购/转介绍线索"],
+  ],
+];
+
+const $ = (selector) => document.querySelector(selector);
+const $$ = (selector) => Array.from(document.querySelectorAll(selector));
+
+function budgetLabel(value) {
+  return ["极低", "谨慎", "标准", "中高", "高强度"][Number(value) - 1];
+}
+
+function tempoLabel(value) {
+  return ["慢热", "稳态", "标准", "快节奏", "冲刺"][Number(value) - 1];
+}
+
+function currentPosition() {
+  return positioningMap[state.positioning];
+}
+
+function currentPersona() {
+  return personas[state.persona];
+}
+
+function currentBriefText() {
+  const p = currentPosition();
+  const persona = currentPersona();
+  const channels = state.channels.join("、") || "门店试驾";
+  return [
+    `车型：${state.modelName}`,
+    `定位：${p.label}`,
+    `目标人群：${persona.label}。${p.audience}`,
+    `核心卖点：${state.corePromise}`,
+    `传播主张：${p.claim}`,
+    `首波内容钩子：${p.hook}`,
+    `渠道组合：${channels}`,
+    `转化动作：${p.action}`,
+    `当前阶段：${stages[state.stage].label}。${stages[state.stage].question}`,
+  ].join("\n");
+}
+
+function updateStatus() {
+  const p = currentPosition();
+  $("#statusModel").textContent = state.modelName || "未命名车型";
+  $("#statusSegment").textContent = p.label;
+  $("#statusPersona").textContent = currentPersona().label;
+  $("#statusStage").textContent = stages[state.stage].label;
+  $("#budgetValue").textContent = budgetLabel(state.budget);
+  $("#tempoValue").textContent = tempoLabel(state.tempo);
+  $("#channelCount").textContent = `${state.channels.length}项`;
+}
+
+function updateStage() {
+  const stage = stages[state.stage];
+  $("#stageQuestion").textContent = stage.question;
+  $("#stageTasks").innerHTML = stage.tasks.map((task) => `<li>${task}</li>`).join("");
+  $$(".stage-tab").forEach((button) => {
+    button.classList.toggle("active", button.dataset.stage === state.stage);
+  });
+}
+
+function updatePersona() {
+  const persona = currentPersona();
+  $("#personaPain").textContent = persona.pain;
+  $("#personaMessage").textContent = persona.message;
+  $("#personaTags").innerHTML = persona.tags.map((tag) => `<span>${tag}</span>`).join("");
+  $$(".persona-tab").forEach((button) => {
+    button.classList.toggle("active", button.dataset.persona === state.persona);
+  });
+}
+
+function updateBrief() {
+  const p = currentPosition();
+  const persona = currentPersona();
+  const score = Math.min(98, 58 + state.channels.length * 5 + Number(state.budget) * 3 + Number(state.tempo));
+  $("#briefAudience").textContent = `${persona.label}：${p.audience}`;
+  $("#briefClaim").textContent = `${state.modelName}主打“${state.corePromise}”，${p.claim}`;
+  $("#briefHook").textContent = p.hook;
+  $("#briefAction").textContent = p.action;
+  $("#readinessScore").textContent = score;
+  $("#kpiAwareness").textContent = p.kpi[0];
+  $("#kpiEngagement").textContent = p.kpi[1];
+  $("#kpiLeads").textContent = p.kpi[2];
+  $("#kpiOrders").textContent = p.kpi[3];
+}
+
+function updateMatrix() {
+  const rows = matrixVersions[state.ideaVersion % matrixVersions.length];
+  const channels = state.channels.join(" / ") || "门店试驾";
+  $("#contentMatrix").innerHTML = rows
+    .map((row) => {
+      const action = row[3].replace("小红书笔记 + 抖音短视频 + B站测评", channels);
+      return `
+        <tr>
+          <td>${row[0]}</td>
+          <td>${row[1]}</td>
+          <td>${row[2]}</td>
+          <td>${action}</td>
+          <td>${row[4]}</td>
+        </tr>
+      `;
+    })
+    .join("");
+}
+
+function syncControls() {
+  $("#modelName").value = state.modelName;
+  $("#positioning").value = state.positioning;
+  $("#corePromise").value = state.corePromise;
+  $("#budget").value = state.budget;
+  $("#tempo").value = state.tempo;
+}
+
+function render() {
+  updateStatus();
+  updateStage();
+  updatePersona();
+  updateBrief();
+  updateMatrix();
+}
+
+function showToast(message) {
+  const toast = $("#toast");
+  toast.textContent = message;
+  toast.classList.add("show");
+  window.setTimeout(() => toast.classList.remove("show"), 1600);
+}
+
+function downloadPlan() {
+  const blob = new Blob([currentBriefText()], { type: "text/plain;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `${state.modelName || "新能源车型"}-上市营销brief.txt`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+  showToast("方案已导出");
+}
+
+async function copyBrief() {
+  const text = currentBriefText();
+  try {
+    await navigator.clipboard.writeText(text);
+    showToast("Brief已复制");
+  } catch {
+    const area = document.createElement("textarea");
+    area.value = text;
+    document.body.appendChild(area);
+    area.select();
+    document.execCommand("copy");
+    area.remove();
+    showToast("Brief已复制");
+  }
+}
+
+function bindEvents() {
+  $("#modelName").addEventListener("input", (event) => {
+    state.modelName = event.target.value.trim() || "未命名车型";
+    render();
+  });
+
+  $("#positioning").addEventListener("change", (event) => {
+    state.positioning = event.target.value;
+    render();
+  });
+
+  $("#corePromise").addEventListener("input", (event) => {
+    state.corePromise = event.target.value.trim() || "智能、安全、可靠";
+    render();
+  });
+
+  $("#budget").addEventListener("input", (event) => {
+    state.budget = event.target.value;
+    render();
+  });
+
+  $("#tempo").addEventListener("input", (event) => {
+    state.tempo = event.target.value;
+    render();
+  });
+
+  $$(".toggle").forEach((button) => {
+    button.addEventListener("click", () => {
+      const channel = button.dataset.channel;
+      if (state.channels.includes(channel)) {
+        state.channels = state.channels.filter((item) => item !== channel);
+      } else {
+        state.channels.push(channel);
+      }
+      button.classList.toggle("active", state.channels.includes(channel));
+      render();
+    });
+  });
+
+  $$(".stage-tab").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.stage = button.dataset.stage;
+      render();
+    });
+  });
+
+  $$(".persona-tab").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.persona = button.dataset.persona;
+      render();
+    });
+  });
+
+  $("#refreshIdeas").addEventListener("click", () => {
+    state.ideaVersion += 1;
+    render();
+    showToast("内容矩阵已更新");
+  });
+
+  $("#copyBrief").addEventListener("click", copyBrief);
+  $("#exportPlan").addEventListener("click", downloadPlan);
+}
+
+syncControls();
+bindEvents();
+render();
+
+</script>
+</body>
+</html>
+
