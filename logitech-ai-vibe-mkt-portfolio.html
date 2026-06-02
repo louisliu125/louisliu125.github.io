@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Vibe Marketing OS for Logitech | 柳毅</title>
+  <style>
+    :root {
+      --ink: #17201d;
+      --soft-ink: #394641;
+      --muted: #6c7974;
+      --paper: #f7f8f5;
+      --panel: #ffffff;
+      --line: #dbe2dd;
+      --logi: #00a86b;
+      --logi-dark: #05684b;
+      --blue: #245a9b;
+      --sky: #e8f2ff;
+      --coral: #c95843;
+      --coral-soft: #fff0ea;
+      --amber: #b98025;
+      --amber-soft: #fff4db;
+      --violet: #6752a8;
+      --violet-soft: #f1edff;
+      --mint: #e9f8f1;
+      --shadow: 0 18px 46px rgba(22, 35, 31, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(247, 248, 245, 0.96), rgba(247, 248, 245, 1)),
+        repeating-linear-gradient(90deg, rgba(0, 168, 107, 0.045) 0, rgba(0, 168, 107, 0.045) 1px, transparent 1px, transparent 44px);
+      line-height: 1.7;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 250px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    aside {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      padding: 28px 22px;
+      background: #10231f;
+      color: #f4fbf7;
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: #e8fbf2;
+      color: var(--logi-dark);
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    .brand h1 {
+      font-size: 18px;
+      line-height: 1.3;
+      margin: 0 0 8px;
+    }
+
+    .brand p {
+      margin: 0 0 26px;
+      color: rgba(244, 251, 247, 0.72);
+      font-size: 13px;
+    }
+
+    nav {
+      display: grid;
+      gap: 8px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: rgba(244, 251, 247, 0.78);
+      padding: 9px 10px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .aside-note {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      color: rgba(244, 251, 247, 0.68);
+      font-size: 12px;
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    section {
+      padding: 68px clamp(22px, 5vw, 72px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero {
+      min-height: 92vh;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+      gap: 46px;
+      align-items: center;
+      background:
+        radial-gradient(circle at 82% 18%, rgba(0, 168, 107, 0.18), transparent 28%),
+        radial-gradient(circle at 18% 78%, rgba(36, 90, 155, 0.13), transparent 32%),
+        #f7f8f5;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border: 1px solid rgba(0, 168, 107, 0.22);
+      border-radius: 999px;
+      color: var(--logi-dark);
+      background: rgba(233, 248, 241, 0.8);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: clamp(30px, 4.8vw, 58px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 12px;
+      font-size: clamp(24px, 2.6vw, 34px);
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    h4 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .lead {
+      color: var(--soft-ink);
+      font-size: clamp(17px, 1.6vw, 21px);
+      max-width: 760px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--ink);
+      text-decoration: none;
+      font-weight: 800;
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .btn.secondary {
+      color: var(--ink);
+      background: #fff;
+      border-color: var(--line);
+    }
+
+    .hardware-scene {
+      min-height: 430px;
+      border-radius: 18px;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.1)),
+        linear-gradient(155deg, #dfeee9 0%, #edf6f1 42%, #e9eef9 100%);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 255, 255, 0.72);
+    }
+
+    .desk-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(16, 35, 31, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16, 35, 31, 0.07) 1px, transparent 1px);
+      background-size: 28px 28px;
+      transform: perspective(600px) rotateX(58deg) scale(1.3);
+      transform-origin: center bottom;
+      opacity: 0.42;
+    }
+
+    .keyboard {
+      position: absolute;
+      left: 38px;
+      right: 38px;
+      bottom: 42px;
+      height: 128px;
+      border-radius: 18px;
+      background: #26312d;
+      box-shadow: 0 18px 32px rgba(11, 20, 18, 0.24);
+      padding: 18px;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 8px;
+    }
+
+    .keyboard span {
+      min-width: 0;
+      border-radius: 7px;
+      background: #3e4a45;
+      box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .mouse {
+      position: absolute;
+      width: 128px;
+      height: 182px;
+      right: 56px;
+      top: 88px;
+      border-radius: 58% 58% 48% 48%;
+      background:
+        linear-gradient(90deg, transparent 49%, rgba(16, 35, 31, 0.32) 50%, transparent 51%),
+        linear-gradient(145deg, #f9fbfa, #cfdad6);
+      box-shadow: 0 22px 34px rgba(14, 28, 24, 0.2);
+      border: 1px solid rgba(16, 35, 31, 0.12);
+    }
+
+    .mouse::before {
+      content: "";
+      position: absolute;
+      top: 32px;
+      left: 50%;
+      width: 12px;
+      height: 34px;
+      border-radius: 999px;
+      background: var(--logi);
+      transform: translateX(-50%);
+    }
+
+    .screen-card {
+      position: absolute;
+      left: 34px;
+      top: 34px;
+      width: 260px;
+      padding: 18px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      box-shadow: 0 18px 34px rgba(22, 35, 31, 0.12);
+    }
+
+    .screen-card strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .signal-bars {
+      display: grid;
+      gap: 8px;
+    }
+
+    .signal-bars span {
+      display: block;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--line);
+      overflow: hidden;
+    }
+
+    .signal-bars span::before {
+      content: "";
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--logi);
+    }
+
+    .signal-bars span:nth-child(1)::before { width: 88%; }
+    .signal-bars span:nth-child(2)::before { width: 64%; background: var(--blue); }
+    .signal-bars span:nth-child(3)::before { width: 76%; background: var(--coral); }
+
+    .section-head {
+      max-width: 900px;
+      margin-bottom: 28px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .cols-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+      box-shadow: 0 12px 28px rgba(22, 35, 31, 0.055);
+    }
+
+    .card p,
+    .card li {
+      color: var(--soft-ink);
+      font-size: 14px;
+    }
+
+    .metric {
+      font-size: 34px;
+      line-height: 1;
+      font-weight: 900;
+      color: var(--logi-dark);
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 9px;
+      margin-bottom: 12px;
+      border-radius: 999px;
+      background: var(--mint);
+      color: var(--logi-dark);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .tag.blue { background: var(--sky); color: var(--blue); }
+    .tag.coral { background: var(--coral-soft); color: var(--coral); }
+    .tag.amber { background: var(--amber-soft); color: var(--amber); }
+    .tag.violet { background: var(--violet-soft); color: var(--violet); }
+
+    .method {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .os-wheel {
+      position: sticky;
+      top: 34px;
+      min-height: 520px;
+      border-radius: 16px;
+      background:
+        conic-gradient(from 45deg, rgba(0, 168, 107, 0.24), rgba(36, 90, 155, 0.22), rgba(201, 88, 67, 0.2), rgba(185, 128, 37, 0.22), rgba(0, 168, 107, 0.24));
+      display: grid;
+      place-items: center;
+      padding: 28px;
+      border: 1px solid rgba(16, 35, 31, 0.08);
+      overflow: hidden;
+    }
+
+    .os-core {
+      width: min(72%, 320px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: var(--shadow);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 34px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .os-core strong {
+      display: block;
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1;
+      color: var(--logi-dark);
+    }
+
+    .os-core span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 12px;
+    }
+
+    .pillar {
+      display: grid;
+      grid-template-columns: 54px minmax(0, 1fr);
+      gap: 16px;
+      align-items: start;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .pillar + .pillar {
+      margin-top: 14px;
+    }
+
+    .letter {
+      width: 54px;
+      height: 54px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: 26px;
+      font-weight: 900;
+      background: var(--logi-dark);
+    }
+
+    .pillar:nth-child(2) .letter { background: var(--blue); }
+    .pillar:nth-child(3) .letter { background: var(--coral); }
+    .pillar:nth-child(4) .letter { background: var(--amber); }
+
+    .pipeline {
+      counter-reset: step;
+      display: grid;
+      gap: 12px;
+    }
+
+    .step {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 52px minmax(0, 1fr) minmax(210px, 0.62fr);
+      gap: 16px;
+      align-items: start;
+      padding: 18px;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    .step::before {
+      content: counter(step, decimal-leading-zero);
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      color: #fff;
+      background: var(--ink);
+      font-weight: 900;
+    }
+
+    .step h4 {
+      margin-bottom: 4px;
+    }
+
+    .step p {
+      color: var(--soft-ink);
+      font-size: 14px;
+    }
+
+    .output {
+      color: var(--muted);
+      font-size: 13px;
+      background: var(--paper);
+      border: 1px dashed #cbd5d0;
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    .persona-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .tab-btn {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--soft-ink);
+      min-height: 38px;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-weight: 800;
+    }
+
+    .tab-btn.active {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+
+    .persona-view {
+      display: none;
+    }
+
+    .persona-view.active {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .scenario {
+      min-height: 280px;
+      border-radius: 14px;
+      padding: 26px;
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(16, 35, 31, 0.82), rgba(5, 104, 75, 0.76)),
+        linear-gradient(45deg, #10231f, #245a9b);
+      display: grid;
+      align-content: end;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .scenario::before {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      right: -70px;
+      top: -60px;
+      border-radius: 50%;
+      border: 34px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .scenario h4 {
+      font-size: 25px;
+      position: relative;
+    }
+
+    .scenario p {
+      color: rgba(255, 255, 255, 0.82);
+      position: relative;
+    }
+
+    .matrix {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .matrix .card {
+      padding: 16px;
+      box-shadow: none;
+    }
+
+    .campaign {
+      background: #10231f;
+      color: #f5fbf8;
+    }
+
+    .campaign .section-head p,
+    .campaign .card p,
+    .campaign .card li {
+      color: rgba(245, 251, 248, 0.76);
+    }
+
+    .campaign .card {
+      background: rgba(255, 255, 255, 0.065);
+      border-color: rgba(255, 255, 255, 0.14);
+      box-shadow: none;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .week {
+      border-top: 4px solid var(--logi);
+    }
+
+    .week:nth-child(2) { border-color: var(--blue); }
+    .week:nth-child(3) { border-color: var(--coral); }
+    .week:nth-child(4) { border-color: var(--amber); }
+
+    .scoreboard {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      display: table;
+    }
+
+    th,
+    td {
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+    }
+
+    th {
+      background: #eef4f1;
+      color: var(--ink);
+      font-size: 13px;
+    }
+
+    td {
+      color: var(--soft-ink);
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .risk-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .risk {
+      display: grid;
+      grid-template-columns: 28px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+    }
+
+    .risk span {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: var(--coral-soft);
+      color: var(--coral);
+      font-weight: 900;
+    }
+
+    .references {
+      background: #eef3ef;
+    }
+
+    .source-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      padding: 0;
+      list-style: none;
+      margin: 0;
+    }
+
+    .source-list a {
+      display: block;
+      min-height: 100%;
+      text-decoration: none;
+      padding: 16px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--soft-ink);
+      font-size: 14px;
+    }
+
+    .source-list strong {
+      color: var(--ink);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .footer {
+      padding: 26px clamp(22px, 5vw, 72px);
+      background: #10231f;
+      color: rgba(245, 251, 248, 0.76);
+      font-size: 13px;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+
+    @media (max-width: 1080px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        position: static;
+        height: auto;
+      }
+
+      nav {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .aside-note {
+        position: static;
+        margin-top: 18px;
+      }
+
+      .hero,
+      .method,
+      .scoreboard,
+      .persona-view.active {
+        grid-template-columns: 1fr;
+      }
+
+      .os-wheel {
+        position: relative;
+        top: auto;
+      }
+
+      .cols-4,
+      .timeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      section {
+        padding: 46px 18px;
+      }
+
+      nav {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hardware-scene {
+        min-height: 360px;
+      }
+
+      .screen-card {
+        width: 220px;
+      }
+
+      .keyboard {
+        left: 20px;
+        right: 20px;
+        height: 116px;
+        gap: 6px;
+      }
+
+      .mouse {
+        width: 106px;
+        height: 154px;
+        right: 28px;
+      }
+
+      .cols-3,
+      .cols-4,
+      .matrix,
+      .timeline,
+      .source-list {
+        grid-template-columns: 1fr;
+      }
+
+      .step {
+        grid-template-columns: 1fr;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <div class="brand">
+        <div class="brand-mark">V</div>
+        <h1>AI Vibe Marketing OS for Tech Hardware</h1>
+        <p>面向罗技营销管培生岗位的前瞻作品页</p>
+      </div>
+      <nav aria-label="页面导航">
+        <a href="#signals">趋势依据</a>
+        <a href="#method">VIBE 方法论</a>
+        <a href="#pipeline">执行流程</a>
+        <a href="#personas">用户场景</a>
+        <a href="#campaign">战役样例</a>
+        <a href="#metrics">指标看板</a>
+        <a href="#risk">风险合规</a>
+        <a href="#sources">参考来源</a>
+      </nav>
+      <div class="aside-note">
+        研究日期：2026.06.01<br />
+        作者：柳毅<br />
+        定位：用 AI、数据与创作者生态重构科技硬件营销。
+      </div>
+    </aside>
+
+    <main>
+      <section class="hero" id="top">
+        <div>
+          <span class="kicker">2026 Vibe MKT Portfolio</span>
+          <h2>让科技硬件从“参数竞争”进入“场景共鸣”。</h2>
+          <p class="lead">
+            针对鼠标、键盘、耳机、摄像头、AI PC 外设等硬件产品，营销不应只讲 DPI、续航、低延迟，而要用 AI 快速捕捉真实痛点，用创作者建立信任，用沉浸体验降低决策门槛，再把用户反馈回流给销售、产品与研发。
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#method">查看方法论</a>
+            <a class="btn secondary" href="#campaign">查看罗技样例</a>
+          </div>
+        </div>
+        <div class="hardware-scene" aria-label="科技硬件营销实验室视觉图">
+          <div class="desk-grid"></div>
+          <div class="screen-card">
+            <strong>AI Signal Board</strong>
+            <div class="signal-bars" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="mouse" aria-hidden="true"></div>
+          <div class="keyboard" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </section>
+
+      <section id="signals">
+        <div class="section-head">
+          <h3>一页趋势判断</h3>
+          <p>2026 的硬件营销正在从“买曝光”转向“建系统”：AI 降低内容实验成本，创作者成为可信分发层，体验活动提供真实证据，社交商务缩短从种草到购买的路径。</p>
+        </div>
+        <div class="grid cols-4">
+          <article class="card">
+            <span class="tag">AI Personalization</span>
+            <div class="metric">59%</div>
+            <h4>AI 个性化成为营销首要趋势</h4>
+            <p>Nielsen 2025 调研显示，全球营销人认为 AI 个性化与优化是最有影响力趋势。对硬件品牌而言，这意味着“不同人看到不同卖点”会成为基础能力。</p>
+          </article>
+          <article class="card">
+            <span class="tag blue">Creator Commerce</span>
+            <div class="metric">500K+</div>
+            <h4>YouTube 购物创作者生态扩容</h4>
+            <p>YouTube 2026 计划强化站内购物、品牌合作与 Shorts 品牌链接，创作者内容正在成为从观看到下单的转化入口。</p>
+          </article>
+          <article class="card">
+            <span class="tag coral">Proof of Real</span>
+            <div class="metric">Trust</div>
+            <h4>AI 内容越多，真实证据越贵</h4>
+            <p>Later 预测 2026 创作者经济会更重视结构、信任、长期杠杆，AI 让内容变便宜，也让“真人实测、长期使用、可验证评价”更有价值。</p>
+          </article>
+          <article class="card">
+            <span class="tag amber">Community Event</span>
+            <div class="metric">Live</div>
+            <h4>罗技已经在做社区化硬件体验</h4>
+            <p>Logitech G PLAY、Aimlabs x Logitech G 挑战等玩法说明：硬件营销不是只展示产品，而是把设备放进玩家、创作者、办公人群的真实任务里。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="method">
+        <div class="section-head">
+          <h3>VIBE-OS：科技硬件 AI 营销方法论</h3>
+          <p>VIBE 不是单个 AI 工具，而是一套持续运转的营销操作系统：先听见真实需求，再找对圈层语言，用 AI 快速生成和测试内容，最后用体验与数据把信任转化为购买。</p>
+        </div>
+        <div class="method">
+          <div class="os-wheel">
+            <div class="os-core">
+              <strong>VIBE</strong>
+              <span>Voice · Identity · Build · Experience</span>
+            </div>
+          </div>
+          <div>
+            <article class="pillar">
+              <div class="letter">V</div>
+              <div>
+                <h4>Voice of Customer Intelligence</h4>
+                <p>用 AI 定期抓取和归类小红书、B站、抖音、YouTube、X、Reddit、电商评论与客服记录，提炼“真实抱怨、未被满足场景、竞品对比语句、购买犹豫点”。</p>
+              </div>
+            </article>
+            <article class="pillar">
+              <div class="letter">I</div>
+              <div>
+                <h4>Identity & Creator Pods</h4>
+                <p>不按年龄粗分人群，而按使用身份建圈层：FPS 玩家、混合办公者、程序员、设计师、学生党、桌搭爱好者。每类人群匹配 3 层创作者：权威测评、腰部场景博主、微型真实用户。</p>
+              </div>
+            </article>
+            <article class="pillar">
+              <div class="letter">B</div>
+              <div>
+                <h4>Build AI Creative Factory</h4>
+                <p>用 AI 快速生成短视频脚本、标题钩子、封面方案、评论区回复、直播话术和本地化文案。AI 负责扩大测试面，人负责判断“像不像真实用户会说的话”。</p>
+              </div>
+            </article>
+            <article class="pillar">
+              <div class="letter">E</div>
+              <div>
+                <h4>Experience-to-Commerce Loop</h4>
+                <p>通过 AR/线下快闪/电竞挑战/办公效率挑战让用户亲手感受差异，再接入创作者链接、站内购物、私域社群和 CRM 复购触达，形成可追踪的转化闭环。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="pipeline">
+        <div class="section-head">
+          <h3>从洞察到转化的 9 步流程</h3>
+          <p>这套流程适用于新品上市、老品焕新、618/双11大促、校园场景推广，也适合罗技这种 SKU 多、圈层强、体验感重要的硬件品牌。</p>
+        </div>
+        <div class="pipeline">
+          <div class="step">
+            <div>
+              <h4>建立产品真相地图</h4>
+              <p>把硬件卖点翻译成用户能感知的任务结果，例如“更快瞄准”“更少手腕疲劳”“会议更清晰”“桌面更少线缆”。</p>
+            </div>
+            <div class="output">产出：卖点-场景-证据表</div>
+          </div>
+          <div class="step">
+            <div>
+              <h4>AI 社媒与评论监听</h4>
+              <p>按关键词、竞品、平台、用户身份抓取真实反馈，AI 聚类出高频痛点、情绪强度、未满足需求与新梗。</p>
+            </div>
+            <div class="output">产出：每周 VOC 雷达</div>
+          </div>
+          <div class="step">
+            <div>
+              <h4>拆分高意图场景</h4>
+              <p>把用户从“想买鼠标”拆成“写论文手累”“打瓦压枪飘”“剪视频快捷键不顺”“视频会议画质差”等可拍摄场景。</p>
+            </div>
+            <div class="output">产出：人群-任务-阻碍矩阵</div>
+          </div>
+          <div class="step">
+            <div>
+              <h4>生成内容测试矩阵</h4>
+              <p>每个场景生成 12 种内容原型：对比测试、一天使用、桌搭改造、反常识、开箱拆解、错误购买避坑、直播挑战等。</p>
+            </div>
+            <div class="output">产出：短视频/图文/直播脚本池</div>
+          </div>
+          <div class="step">
+            <div>
+              <h4>搭建 Creator Pods</h4>
+              <p>用“小而准”的组合替代只买头部曝光：1 位权威测评建立可信度，5-10 位腰部垂类创作者做场景渗透，50 位微型用户做真实口碑。</p>
+            </div>
+            <div class="output">产出：创作者分层名单与 brief</div>
+          </div>
+          <div class="step">
+            <div>
+              <h4>设计体验型事件</h4>
+              <p>把硬件变成任务挑战，如 7 天效率桌面改造、Aimlab 精准度挑战、咖啡厅远程办公体验日、校园宿舍桌搭改造。</p>
+            </div>
+            <div class="output">产出：可拍、可玩、可分享的活动机制</div>
+          </div>
+          <div class="step">
+            <div>
+              <h4>接入社交商务路径</h4>
+              <p>每条内容都绑定明确下一步：产品配置页、创作者专属链接、直播预约、线下体验报名、电商优惠券或私域测评问卷。</p>
+            </div>
+            <div class="output">产出：平台-链接-优惠-归因表</div>
+          </div>
+          <div class="step">
+            <div>
+              <h4>用 AI 做实时优化</h4>
+              <p>按平台监控 CTR、完播率、评论问题、加购率、退货原因，AI 给出下一轮封面、标题、脚本、投放人群和 FAQ 优化建议。</p>
+            </div>
+            <div class="output">产出：48 小时迭代清单</div>
+          </div>
+          <div class="step">
+            <div>
+              <h4>反馈销售、门店与研发</h4>
+              <p>把用户反馈沉淀为“店员话术”“电商详情页 FAQ”“产品功能改进建议”“下一代 SKU 场景机会”。</p>
+            </div>
+            <div class="output">产出：跨部门用户洞察周报</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="personas">
+        <div class="section-head">
+          <h3>罗技可优先切入的 4 类高价值场景</h3>
+          <p>硬件购买决策通常不是由参数表触发，而是由某个“我受够了”的瞬间触发。下面用场景替代泛人群，更容易指导内容创作与销售话术。</p>
+        </div>
+        <div class="persona-tabs" role="tablist" aria-label="用户场景切换">
+          <button class="tab-btn active" type="button" data-target="office">混合办公者</button>
+          <button class="tab-btn" type="button" data-target="gamer">竞技玩家</button>
+          <button class="tab-btn" type="button" data-target="creator">内容创作者</button>
+          <button class="tab-btn" type="button" data-target="student">学生与入门职场人</button>
+        </div>
+
+        <div class="persona-view active" id="office">
+          <div class="scenario">
+            <h4>“我不是想买鼠标，我是想让一天工作少一点阻力。”</h4>
+            <p>适合 MX 系列、人体工学鼠标、键盘、摄像头、耳机。</p>
+          </div>
+          <div class="matrix">
+            <article class="card"><h4>痛点</h4><p>多设备切换麻烦、手腕疲劳、会议声音画质不稳定、桌面线缆杂乱。</p></article>
+            <article class="card"><h4>内容钩子</h4><p>“我把 8 小时办公桌改造成低打扰工作流”“多设备切换到底能省多少时间”。</p></article>
+            <article class="card"><h4>体验机制</h4><p>联合 coworking 空间做 30 分钟效率桌面诊断，现场生成个性化设备组合建议。</p></article>
+            <article class="card"><h4>转化路径</h4><p>配置问卷、套装优惠、企业采购线索、LinkedIn/X 工作流内容沉淀。</p></article>
+          </div>
+        </div>
+
+        <div class="persona-view" id="gamer">
+          <div class="scenario">
+            <h4>“性能必须被看见：用挑战证明，不用口号证明。”</h4>
+            <p>适合 Logitech G 鼠标、键盘、耳机、方向盘、直播设备。</p>
+          </div>
+          <div class="matrix">
+            <article class="card"><h4>痛点</h4><p>跟枪不稳、延迟焦虑、键盘触发不顺、耳机定位不准、装备升级不知道是否值得。</p></article>
+            <article class="card"><h4>内容钩子</h4><p>“同一张 Aimlab 图，换鼠标前后提升多少”“低延迟不是玄学，是这 3 个动作”。</p></article>
+            <article class="card"><h4>体验机制</h4><p>线上排行榜 + 线下电竞快闪 + KOL 实时挑战，让用户把成绩截图变成社交货币。</p></article>
+            <article class="card"><h4>转化路径</h4><p>赛事报名页、创作者专属码、游戏皮肤/IP 联动、直播间限时套装。</p></article>
+          </div>
+        </div>
+
+        <div class="persona-view" id="creator">
+          <div class="scenario">
+            <h4>“设备不是摆设，是创作流程的一部分。”</h4>
+            <p>适合摄像头、麦克风、键鼠、灯光、直播和视频会议设备。</p>
+          </div>
+          <div class="matrix">
+            <article class="card"><h4>痛点</h4><p>出片慢、直播画质差、声音不干净、快捷键混乱、设备兼容成本高。</p></article>
+            <article class="card"><h4>内容钩子</h4><p>“一个人拍测评，如何用设备把剪辑时间压缩 30%”“直播间新手设备避坑”。</p></article>
+            <article class="card"><h4>体验机制</h4><p>创作者驻地计划：让 10 位垂类创作者连续 30 天公开改造自己的内容工作流。</p></article>
+            <article class="card"><h4>转化路径</h4><p>YouTube 长评测 + Shorts 切片 + B站教程 + 电商套装页，沉淀长期搜索流量。</p></article>
+          </div>
+        </div>
+
+        <div class="persona-view" id="student">
+          <div class="scenario">
+            <h4>“预算有限，但我想买一个不会后悔的第一套设备。”</h4>
+            <p>适合入门键鼠、摄像头、耳机、校园套装。</p>
+          </div>
+          <div class="matrix">
+            <article class="card"><h4>痛点</h4><p>预算敏感、参数看不懂、宿舍空间小、网课/实习/游戏多场景混用。</p></article>
+            <article class="card"><h4>内容钩子</h4><p>“300/500/800 元桌搭怎么选”“一套设备覆盖网课、实习和游戏”。</p></article>
+            <article class="card"><h4>体验机制</h4><p>校园桌搭改造赛，上传宿舍桌面照片，AI 推荐低预算配置并生成改造图。</p></article>
+            <article class="card"><h4>转化路径</h4><p>学生认证优惠、校园 KOC 拼团、开学季套装、社群晒单返券。</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="campaign" id="campaign">
+        <div class="section-head">
+          <span class="kicker">Sample Campaign</span>
+          <h3>罗技样例战役：Find Your Flow Station</h3>
+          <p>目标：把罗技从“买一个鼠标/键盘”升级为“搭建自己的高效工作与游戏空间”。适合 MX 系列、Logitech G、摄像头、耳机、桌面套装联动。</p>
+        </div>
+        <div class="timeline">
+          <article class="card week">
+            <h4>第 1-2 周：AI 洞察热身</h4>
+            <p>抓取“手累、延迟、桌搭、远程办公、游戏设备升级”等关键词，输出 20 个高频场景和 50 条用户原话。</p>
+          </article>
+          <article class="card week">
+            <h4>第 3-4 周：创作者共创</h4>
+            <p>邀请办公、游戏、桌搭、创作类 KOL 各自发布“我的 Flow Station”改造过程，而不是只发产品口播。</p>
+          </article>
+          <article class="card week">
+            <h4>第 5-8 周：体验挑战放大</h4>
+            <p>上线 AI 桌面诊断 H5，用户上传桌面或选择任务，生成设备组合建议与内容海报；线下做快闪体验。</p>
+          </article>
+          <article class="card week">
+            <h4>第 9-12 周：转化与沉淀</h4>
+            <p>将高转化场景改造成电商详情页模块、销售 FAQ、门店话术和下一轮产品共创需求池。</p>
+          </article>
+        </div>
+        <div class="grid cols-3" style="margin-top:18px">
+          <article class="card">
+            <h4>核心内容公式</h4>
+            <p>真实痛点开场 + 产品介入前后对比 + 可视化证据 + 创作者个人判断 + 明确购买下一步。</p>
+          </article>
+          <article class="card">
+            <h4>X / YouTube 实践借鉴</h4>
+            <p>X 用 build-in-public、数据截图、观点线程制造专业感；YouTube 用长评测建立信任，再切 Shorts 做规模分发和购物入口。</p>
+          </article>
+          <article class="card">
+            <h4>与罗技的适配点</h4>
+            <p>罗技产品线覆盖办公、游戏、创作、会议，天然适合用“场景套装 + 社区挑战 + 创作者长期伙伴”做组合营销。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="metrics">
+        <div class="section-head">
+          <h3>指标看板：从曝光指标升级到决策指标</h3>
+          <p>2026 创作者营销不能只报播放量和点赞。对硬件营销更重要的是：用户是否理解差异、是否愿意试用、是否加购，以及反馈是否能指导产品和销售。</p>
+        </div>
+        <div class="scoreboard">
+          <table>
+            <thead>
+              <tr>
+                <th>阶段</th>
+                <th>核心问题</th>
+                <th>建议指标</th>
+                <th>AI 用法</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>认知</td>
+                <td>是否被目标圈层看见</td>
+                <td>有效触达、完播率、搜索增长、收藏率</td>
+                <td>自动识别高潜标题、封面、开头 3 秒话术</td>
+              </tr>
+              <tr>
+                <td>信任</td>
+                <td>是否相信产品差异</td>
+                <td>评论正负情绪、问题密度、KOL 复提率、UGC 二创数</td>
+                <td>聚类评论中的疑虑和证据需求</td>
+              </tr>
+              <tr>
+                <td>体验</td>
+                <td>是否愿意试用或配置</td>
+                <td>H5 完成率、报名率、门店到访、直播互动</td>
+                <td>生成个性化推荐和活动后 follow-up 文案</td>
+              </tr>
+              <tr>
+                <td>转化</td>
+                <td>是否带来购买行为</td>
+                <td>CTR、加购率、券核销、GMV、CAC、复购</td>
+                <td>按人群与内容类型预测下一轮预算分配</td>
+              </tr>
+              <tr>
+                <td>反馈</td>
+                <td>是否反哺业务决策</td>
+                <td>FAQ 更新数、销售话术采纳数、产品建议入库数</td>
+                <td>自动生成跨部门 VOC 周报</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="card">
+            <span class="tag violet">HR 会看到的能力</span>
+            <h4>这份作品想体现的不是“会做海报”，而是营销经营意识。</h4>
+            <ul>
+              <li>能把趋势翻译为业务流程。</li>
+              <li>能理解科技硬件的高决策成本和体验壁垒。</li>
+              <li>能连接 Sales、Marketing、E-commerce、Product、Market Analysis。</li>
+              <li>能把 AI 用在提效、洞察和转化，而不是停留在生成文案。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="risk">
+        <div class="section-head">
+          <h3>风险与合规原则</h3>
+          <p>AI vibe marketing 的边界越清楚，越能获得品牌与用户信任。尤其是科技硬件，所有性能表达都应可验证、可复现、可解释。</p>
+        </div>
+        <div class="grid cols-3">
+          <article class="card risk-list">
+            <h4>AI 内容透明</h4>
+            <div class="risk"><span>1</span><p>AI 生成或明显改造的人像、声音、场景，应按平台规则披露，避免让用户误以为是真实拍摄。</p></div>
+            <div class="risk"><span>2</span><p>不用 AI 虚构用户证言、测试成绩、对比结果或创作者体验。</p></div>
+          </article>
+          <article class="card risk-list">
+            <h4>性能证据严谨</h4>
+            <div class="risk"><span>1</span><p>DPI、延迟、续航、降噪、兼容性等表达需要测试条件和数据来源。</p></div>
+            <div class="risk"><span>2</span><p>竞品对比避免绝对化表述，优先用“场景表现”和“适用人群”表达差异。</p></div>
+          </article>
+          <article class="card risk-list">
+            <h4>数据隐私保护</h4>
+            <div class="risk"><span>1</span><p>用户上传桌面照片、使用场景和设备偏好时，应明确告知用途并提供删除入口。</p></div>
+            <div class="risk"><span>2</span><p>VOC 分析只输出聚合洞察，不在跨部门报告中暴露个人身份信息。</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="references" id="sources">
+        <div class="section-head">
+          <h3>参考来源与趋势依据</h3>
+          <p>以下来源用于校准 2026 AI、YouTube、创作者经济与罗技社区营销趋势；页面中的框架和流程为面向罗技硬件业务的二次整理。</p>
+        </div>
+        <ul class="source-list">
+          <li><a href="https://blog.youtube/inside-youtube/the-future-of-youtube-2026/" target="_blank" rel="noreferrer"><strong>YouTube CEO 2026 Letter</strong>创作者经济、站内购物、AI 创作工具与透明度。</a></li>
+          <li><a href="https://www.nielsen.com/insights/2025/ai-redefining-marketing-today-tomorrow/" target="_blank" rel="noreferrer"><strong>Nielsen: AI Redefining Marketing</strong>AI 个性化、营销测量与社媒情绪分析趋势。</a></li>
+          <li><a href="https://theinfluencermarketingfactory.com/wp-content/uploads/2026/02/Creator-Economy-Report-2026.pdf" target="_blank" rel="noreferrer"><strong>Creator Economy Report 2026</strong>创作者广告支出、YouTube Shopping、AI 与真实内容价值。</a></li>
+          <li><a href="https://later.com/blog/twenty-2026-creator-economy-predictions/" target="_blank" rel="noreferrer"><strong>Later: 20 Creator Economy Predictions</strong>长期杠杆、真实性、AI 工作流、创作者作为媒体公司。</a></li>
+          <li><a href="https://www.aspire.io/blog/2026-influencer-marketing-predictions" target="_blank" rel="noreferrer"><strong>Aspire: 2026 Influencer Predictions</strong>细分创作者、IRL 活动、创作者作为顾问。</a></li>
+          <li><a href="https://news.logitech.com/press-releases/news-details/2025/Logitech-G-Drops-a-Wide-Array-of-New-Products-and-Innovations-at-Logitech-G-PLAY-2025/default.aspx" target="_blank" rel="noreferrer"><strong>Logitech G PLAY 2025</strong>直播发布、媒体、创作者、粉丝与社区结合。</a></li>
+          <li><a href="https://www.logitech.com/blog/2025/09/17/race-aim-score-create-logitech-g-brings-breakthroughs-in-play-to-life/" target="_blank" rel="noreferrer"><strong>Logitech G Competitions</strong>Aimlabs 挑战、赛事、玩家社区与硬件体验。</a></li>
+          <li><a href="https://www.logitech.com/blog/2025/07/08/logitech-celebrates-creators4bipoc-with-new-community-initiatives-creator-stories-and-tournaments/" target="_blank" rel="noreferrer"><strong>Logitech Creator Community</strong>创作者故事、社区倡议与长期连接。</a></li>
+        </ul>
+      </section>
+
+      <div class="footer">
+        作品用途：用于申请罗技 Management Trainee Program，展示对 Marketing / Sales / E-commerce / Product / Market Analysis 的跨职能理解。页面可继续扩展为可投递作品集、面试演示稿或英文版本。
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const views = document.querySelectorAll(".persona-view");
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const target = button.dataset.target;
+        tabButtons.forEach((item) => item.classList.toggle("active", item === button));
+        views.forEach((view) => view.classList.toggle("active", view.id === target));
+      });
+    });
+  </script>
+</body>
+</html>
